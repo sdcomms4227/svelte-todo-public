@@ -394,8 +394,8 @@ var app = (function () {
     const file$3 = "src\\components\\Input.svelte";
 
     function create_fragment$3(ctx) {
-    	let form;
-    	let div;
+    	let div1;
+    	let div0;
     	let input;
     	let t0;
     	let button;
@@ -404,8 +404,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			form = element("form");
-    			div = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
     			input = element("input");
     			t0 = space();
     			button = element("button");
@@ -413,25 +413,25 @@ var app = (function () {
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "form-control");
     			attr_dev(input, "placeholder", "할일을 입력하쇼");
-    			add_location(input, file$3, 8, 4, 207);
-    			attr_dev(div, "class", "form-outline flex-fill");
-    			add_location(div, file$3, 7, 2, 165);
+    			add_location(input, file$3, 8, 4, 206);
+    			attr_dev(div0, "class", "form-outline flex-fill");
+    			add_location(div0, file$3, 7, 2, 164);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "btn btn-primary ms-2");
-    			add_location(button, file$3, 10, 2, 337);
-    			attr_dev(form, "class", "d-flex justify-content-center align-items-center mb-4");
-    			add_location(form, file$3, 6, 0, 93);
+    			add_location(button, file$3, 10, 2, 336);
+    			attr_dev(div1, "class", "d-flex justify-content-center align-items-center mb-4");
+    			add_location(div1, file$3, 6, 0, 93);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, form, anchor);
-    			append_dev(form, div);
-    			append_dev(div, input);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, input);
     			set_input_value(input, /*todo*/ ctx[0]);
-    			append_dev(form, t0);
-    			append_dev(form, button);
+    			append_dev(div1, t0);
+    			append_dev(div1, button);
 
     			if (!mounted) {
     				dispose = [
@@ -462,7 +462,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(form);
+    			if (detaching) detach_dev(div1);
     			mounted = false;
     			run_all(dispose);
     		}
